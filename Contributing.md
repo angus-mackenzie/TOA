@@ -1,0 +1,2 @@
+# Contributing
+If you feel I have left anything out, or have explained something incorrectly - please feel free to add to this repository. I am more than happy to field any other queries to my [email](mailto:mckang009@myuct.ac.za), and if you see anything on the [Project Board]() for this repo that you think you will be able to complete, please do so.
