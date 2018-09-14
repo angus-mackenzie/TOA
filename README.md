@@ -8,6 +8,7 @@ Hence, these notes were taken & adapted from slides and lectures created by the 
 
 Here are summaries of slides:
 * [Introduction](TOA1.md)
+* [Algorithm Efficiency](TOA2.md)
 
 The books used for this course are:
 * [Introduction to the Design & Analysis of Algorithms]()
