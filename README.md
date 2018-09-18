@@ -6,7 +6,7 @@ Hence, these notes were taken & adapted from slides and lectures created by the 
 * [James Gain](https://people.cs.uct.ac.za/~jgain/)
 * [Nathan Geffen](https://www.researchgate.net/profile/Nathan_Geffen)
 
-Here are summaries of slides :eye_glasses:
+Here are summaries of slides :eyeglasses:
 * [Introduction](TOA1.md)
 * [Algorithm Efficiency](TOA2.md)
 * [Brute Force](TOA3.md)
