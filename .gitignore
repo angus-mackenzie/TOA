@@ -1,3 +1,4 @@
 *.html
 *.class
 *.vscode
+.vscode/settings.json
