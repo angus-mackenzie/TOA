@@ -17,3 +17,5 @@ The books used for this course :books:
 * [Data Structures & Algorithm Analysis in Java](http://people.cs.vt.edu/~shaffer/Book/)
 * [Art of Computer Programming](http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf)
 * [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/full-text/book/book.html)
+
+Before adding to this repository - please check out the [Contributing](Contributing.md) file 📁
