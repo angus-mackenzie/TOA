@@ -59,7 +59,7 @@ def test():
     print('Dynamic Programming time elapsed:', end - start)
     print()
 
-    print('Large problem size: n = 40, expected output = 9227465')
+    print('Large problem size: n = 40, expected output = 102334155')
     start = time.time()
     value = fib_brute_force(40)
     end = time.time()
