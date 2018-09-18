@@ -225,7 +225,7 @@ This is an instance of a problem. How would we go about generalising it?
 * Are there any constraints on the input?
 
 **Solution**
-* Input: a list<a> of crossing times for n people, numbered 1,..., n
+* Input: a list of crossing times for n people, numbered 1,..., n
 * Output: total time to cross
 * Strategy: use 1 & 2 as shuttles and send the others across in pairs:
 ```
@@ -241,7 +241,7 @@ In this solution, 1 and 2 cross then 1 goes back then 2 and 3 go across and 2 ba
 
 This solution is inadequate that falsely assumes certain inputs:
 * list may not be sorted n ascending order
-    * Sort <a>
+    * Sort 
 * n may not be even numbered
     * Add an extra clause after the loop
 * n > 3 not guaranteed 
