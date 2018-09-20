@@ -4,7 +4,7 @@ These are notes compiled for a third year Computer Science course. Hence, they a
 ## How To
 For minor issues like spelling/grammar mistakes - please create an [issue](https://github.com/AngusTheMack/TOA/issues/new/choose). If it is anything else, or you want to complete a task listed on the [Notes Project Board](https://github.com/AngusTheMack/TOA/projects/1), please fork the repository and make the changes/additions you want and then submit a pull request and assign it to me 🆒
 
-Format your Markdown however you like, as long as it is readable and gets the point across 🏄
+Format your Markdown however you like, as long as it is readable and gets the point across 🏄 However, when it comes to mathematical equations the Github markdown renderer does not interpret mathematical notation. Hence, it is best to use the [Code Cogs website](https://www.codecogs.com/eqnedit.php) in order to create an embeddable html version of the equation. Which does make life a bit easier. Alternatively, you can download a `.gif` based image of the equation and include that in the markdown file. This solution was found thanks to [Aaron Gray's Comment](https://github.com/github/markup/issues/897#issuecomment-231591884) on the relevant issue.
 
 
 ## Environment
