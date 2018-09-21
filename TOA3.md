@@ -156,3 +156,77 @@ return -1;
     * All characters are found to match (successful search):
     * A mismatch detected
 3. WHILE pattern is not found and the text is not yet exhausted, realign pattern one position to the right and repeat step 2
+4. 
+## Closest Pair
+* Problem
+    * Find the two ints that are closest together in a set of 2-D points P<sub>1</sub> = (x<sub>1</sub>,y<sub>1</sub>),..,P<sub>n</sub> = (X<sub>n</sub>,Y<sub>n</sub>)
+* Algorithm
+```
+dmin <- infinity
+for i <- 1 to n-1 do
+    for j <- i+1 to n do
+        d <- sqrt((xi-xk)**2+(yi-yk)**2)
+        if d < dmin
+            dmin <- d;
+            index1 <- i;
+            index2 <- j;
+return index1, index2
+```
+* Efficiency: Θ(n<sup>2</sup>)
+## Convex Hull Problem
+* Problem
+    * Find the convex hull enclosing n 2-D points
+    * Convex Hull: If S is a set of points then the Convex Hull of S is the smallest convex set containing S
+    * Convex Set: A set of points in the plane is convex if for any two points P and Q, the line segment joining P and Q belongs to the set
+### Brute Force
+* Algorithm
+    * For each pair of points p<sub>1</sub> and p<sub>2</sub>
+    * Determine whether all other points lie to the same side of the straight line through p<sub>1</sub> and p<sub>2</sub>
+* Efficiency
+    * Efficiency: Θ(n<sup>3</sup>)
+* Strengths
+# Pros and Cons of Brute Force
+* Strengths 
+    * Wide applicability
+    * Simplicity
+    * Yields reasonable algorithm for some important problems and standard algorithms for simple computational tasks
+    * A good yardstick for better algorithms
+    * Sometimes doing better is not worth the bother
+* Weakness
+    * Rarely produces efficient algorithms
+    * Some brute force algorithms are infeasibly slow
+    * Note as creative as some other design techniques
+# Exhaustive Search
+* Definition
+    * A brute force solution to the search for an element with a special property
+    * Usually among combinatorial objects such a permutations or subsets
+    * Suggests generating each and every element of the problem's domain
+* Method
+    1. Construct a way of listing all potential solutions to the problem in a systematic manner
+        * All Solutions one by one (disqualifying infeasible ones) keeping track of the best one found so far
+        * When search ends, announce the winner
+# Travelling Salesman Problem
+* Problem
+    * Given n cities with known distances between each pair
+    * Find the shortest tour that passes through all the cities exactly once before returning to the starting city
+* Alternatively
+    * Find shortest *Hamiltonian Circuit* in a weighted connected graph
+* Example:
+
+![Travelling Salesman](img/travellingsalesman.png)
+
+## Exhaustive Search Implementation
+![Example](img/travellingsalesmanexample.png)
+* Improvements
+    * Start and end at one particular city
+    * Remove tours that differ only in direction
+* Efficiency
+    * `(n-1)!/2 = O(n!)`
+# Assignment Problem
+* Assignment Problem
+* n people and n jobs to be done
+* Each person is assigned to do exactly one job
+* Each job is assigned to exactly one person
+* The cost of person i doing job j is C[i,j]
+* Find a job assignment with the minimum cost
+

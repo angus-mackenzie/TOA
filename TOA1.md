@@ -88,6 +88,8 @@ gcd = 2 * 3 = 6
 5. Analyze the algorithm
 6. Code algorithm
 
+Another representation of the above 6 steps:
+
 ![Methodology](img/methodology.png)
 
 # Analyzing Algorithms
@@ -157,7 +159,7 @@ Fibo(n):
     return F[n]
 ```
 
-Here is am even better solution:
+Here is an even better solution:
 ```java
 public BigInteger fibo(int n){
     if(n==0){
@@ -186,7 +188,7 @@ public long fibo(in n){
 ```
 While it may look extremely efficient it wil be incorrect from a value of 43 onwards as Fibo(43) wil give 433494436 and the correct answer 433494437.
 
-Using Java it calculates Fibo up to 43 correctly. But for Fibo(43) and onwards it gets increasingly worse. This is due to floating point precision. There is a fourth solution:
+Using Java it calculates Fibo up to 43 correctly. But for Fibo(43) and onwards it gets increasingly worse. This is due to floating point precision. [There is a fourth solution on page 109 of the Dasgupta textbook TODO]()
 
 # Puzzle
 **Problem**:

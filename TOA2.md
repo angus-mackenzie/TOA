@@ -294,7 +294,7 @@ The above solution can be broken down into the following format `(n-1 + n-2 + n-
 
 Therefore, the worst case is Θ(n<sup>2</sup>), and the average case is that too.
 
-TODO Add section here
+TODO Add section here with maths
 
 ## Decrease & Conquer
 ```java
