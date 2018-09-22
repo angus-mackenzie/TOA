@@ -11,6 +11,8 @@ Here are summaries of slides :eyeglasses:
 * [Algorithm Efficiency](TOA2.md)
 * [Brute Force](TOA3.md)
 
+The [pracs 📁](pracs) has information about the different practicals.
+
 The books used for this course :books:
 * [Introduction to the Design & Analysis of Algorithms](http://www.vgloop.com/f-/1394454921-126688.pdf)
 * [Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms.html)
