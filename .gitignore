@@ -2,3 +2,5 @@
 *.class
 *.vscode
 .vscode/settings.json
+*.zip
+*.idea

@@ -13,8 +13,16 @@ public class Modulus {
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.nextLine());
         int Z = Integer.parseInt(sc.nextLine());
-//        int N = 6;
-//        int Z = 3;
+        sc.close();
+        //int N = 6;
+        //int Z = 3;
+        //Constraints
+        // 1 <= N <= 10000
+        //0 <= Z < N
+        if(N <= 0 || N >1000 || Z < 0 || Z >=N){
+            System.out.println(pairs.size());
+            System.exit(0);
+        }
         for(int i = 0; i < N;i++) {
             for (int j = 0; j < N; j++) {
                 if (doMod(j, i, N) == Z) {
