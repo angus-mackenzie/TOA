@@ -1,8 +1,6 @@
 # Modulus Practical
 This practical was intended to be solved via Brute Force. Hence, the solution has a time complexity of O(n<sup>2</sup>).
 
-However, I am getting failed tests. For Trial 3 in the automatic marker, the expected output was 0 and my program produces is 25. Likewise, for trial 5 the expected output was 0 and my program produced 133. Again for trial 6 the expected output was 0 and my program produced 1213. Please assist if you know why this is happening.
-
 ## Problem Description
 Write a program that, given a positive integer N, and a non-negative integer, Z, counts the number of pairs of positive integers X and Y for which *(X \* Y)modulo N == Z*
 

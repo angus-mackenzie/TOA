@@ -5,7 +5,7 @@ I added the table below in order to easily visualize how all the practicals are 
 
 |Practical|Status|Mark|
 |---|---|---|
-|[Modulus](Course/modulus)|In Progress|70/100|
+|[Modulus](Course/modulus)|Completed|100/100|
 
 
 *Note* some practicals do not have a mark, so simply say NA in the mark column
