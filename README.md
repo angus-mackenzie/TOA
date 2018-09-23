@@ -21,3 +21,7 @@ The books used for this course :books:
 * [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/full-text/book/book.html)
 
 Before adding to this repository - please check out the [Contributing](Contributing.md) file 📁
+
+# Contributors ❤️
+Thanks for helping out with this repo!
+* [Michael White](https://github.com/MikeJamesWhite) 📷
