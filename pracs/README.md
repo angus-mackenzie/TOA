@@ -6,6 +6,11 @@ I added the table below in order to easily visualize how all the practicals are 
 |Practical|Status|Mark|
 |---|---|---|
 |[Modulus](Course/modulus)|Completed|100/100|
+|[Dividing](Course/dividing)|Incomplete|0/100|
+|[Pricing](Course/pricing)|Incomplete|0/100
+|[Scoring](Course/scoring)|Incomplete|0/100|
+|[Open Practical](Other/open)|Incomplete|NA|
+|[2017 Practical](Other/2017)|Incomplete|NA|
 
 
 *Note* some practicals do not have a mark, so simply say NA in the mark column
