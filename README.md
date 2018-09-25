@@ -26,3 +26,4 @@ The books used for this course :books:
 Thanks for helping out with this repo!
 * [Michael White](https://github.com/MikeJamesWhite) 📷
 * [Charl Ritter](https://github.com/CharlRitter) 💹
+* [Jana Wessels](https://github.com/Jana-Wessels) 💯
