@@ -3,14 +3,18 @@ Here are the practicals I can find. There are two folders within this repository
 
 I added the table below in order to easily visualize how all the practicals are going. If you have completed a practical in a different way(perhaps more efficient, or in a different language 😎)  please add it to the repository and list it in the table below!
 
+# Practical Test 1
 |Practical|Status|Mark|
 |---|---|---|
 |[Modulus](Course/modulus)|Completed|100/100|
+|[Scoring](Course/scoring)|Completed|100/100|
+|[Open Practical](Other/open)|Half-complete|NA|
+|[2017 Practical](Other/2017)|Completed|NA|
+
+# Practical Test 2
+|Practical|Status|Mark|
+|---|---|---|
 |[Dividing](Course/dividing)|Incomplete|0/100|
 |[Pricing](Course/pricing)|Incomplete|0/100
-|[Scoring](Course/scoring)|Incomplete|0/100|
-|[Open Practical](Other/open)|Incomplete|NA|
-|[2017 Practical](Other/2017)|Incomplete|NA|
-
 
 *Note* some practicals do not have a mark, so simply say NA in the mark column
