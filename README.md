@@ -1,7 +1,7 @@
 # Theory of Algorithms
 These notes were compiled during my Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that I deemed useful. 
 
-Before adding to this repository - please check out the [Contributing](Contributing.md) file 📁 and if you want to help out please check out the [Project Board](https://github.com/AngusTheMack/TOA/projects/1) for this repo 🅱️
+Before adding to this repository - please check out the [Contributing Guidelines](Contributing.md) 📐 and if you want to help out please check out the [Project Board](https://github.com/AngusTheMack/TOA/projects/1) for this repo 🅱️
 
 These notes were taken & adapted from slides and lectures created by the following people: 
 * [Sonia Berman](http://www.hpi.cs.uct.ac.za/sonia)
@@ -25,3 +25,4 @@ The books used for this course :books:
 # Contributors ❤️
 Thanks for helping out with this repo!
 * [Michael White](https://github.com/MikeJamesWhite) 📷
+* [Charl Ritter](https://github.com/CharlRitter) 💹
