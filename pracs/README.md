@@ -15,7 +15,7 @@ I added the tables below in order to easily visualize how all the practicals are
 |Practical|Status|Mark|
 |---|---|---|
 |[Dividing](Course/dividing)|Incomplete|0/100|
-|[Pricing](Course/pricing)|Incomplete|0/100
+|[Pricing](Course/pricing)|Complete|100/100
 
 # Dynamic Programming
 |Practical|Status|Mark|
