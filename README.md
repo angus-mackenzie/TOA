@@ -7,6 +7,7 @@ These notes were taken & adapted from slides and lectures created by the followi
 * [Sonia Berman](http://www.hpi.cs.uct.ac.za/sonia)
 * [James Gain](https://people.cs.uct.ac.za/~jgain/)
 * [Nathan Geffen](https://www.researchgate.net/profile/Nathan_Geffen)
+* [Thomas Meyer](http://www.cair.za.net/people/tommie-meyer)
 
 Here are summaries of slides :eyeglasses:
 * [Introduction](TOA1.md)
