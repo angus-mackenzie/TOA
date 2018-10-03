@@ -20,5 +20,7 @@ I added the tables below in order to easily visualize how all the practicals are
 # Dynamic Programming
 |Practical|Status|Mark|
 |---|---|---|
+|[Cycling](Course/cycling)|Incomplete|0/100|
+|[Path](Course/path)|Incomplete|0/100|
 
 *Note* some practicals do not have a mark, so simply say NA in the mark column

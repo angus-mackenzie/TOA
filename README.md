@@ -1,5 +1,5 @@
 # Theory of Algorithms
-These notes were compiled during my Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that I deemed useful. 
+These notes were compiled during our Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that was deemed useful. 
 
 Before adding to this repository - please check out the [Contributing Guidelines](Contributing.md) 📐 and if you want to help out please check out the [Project Board](https://github.com/AngusTheMack/TOA/projects/1) for this repo 🅱️
 
