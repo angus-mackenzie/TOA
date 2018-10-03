@@ -28,3 +28,4 @@ Thanks for helping out with this repo!
 * [Michael White](https://github.com/MikeJamesWhite) 📷
 * [Charl Ritter](https://github.com/CharlRitter) 💹
 * [Jana Wessels](https://github.com/Jana-Wessels) 💯
+* [Scott Hallauer](https://github.com/scotthallauer) 🛴
