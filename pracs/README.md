@@ -1,4 +1,11 @@
 # Practicals
+This folder contains practicals from multiple sources. A large majority of these practicals are from within the Computer Science department at UCT. They are in no way mine. They were created by the following people:
+* [Stephan Jamieson](https://www.cs.uct.ac.za/staff)
+* [Sonia Berman](http://www.hpi.cs.uct.ac.za/sonia)
+
+If you wish me to take a practical down, please don't hesitate to contact me on [my email](mailto:mckang009@myuct.ac.za)
+
+
 Here are the practicals I can find. There are two folders within this repository the *Course* folder and the *Others* folder. The [Course 📁](Course) refers to the practicals that were given to us during the course in 2018 and the [Others 📁](Others) refers to the other practicals that I could find/I received - which were largely the same ones, just in a different format.
 
 I added the tables below in order to easily visualize how all the practicals are going. If you have completed a practical in a different way(perhaps more efficient, or in a different language 😎)  please add it to the repository!
