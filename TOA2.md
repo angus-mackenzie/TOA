@@ -4,10 +4,10 @@
     - [Typical Algorithm Efficiency Classes](#typical-algorithm-efficiency-classes)
 - [Big O - Intuitively](#big-o---intuitively)
 - [Definition Big O](#definition-big-o)
-- [Omega Ω (Not important)](#omega-%CF%89-not-important)
-- [Theta Θ (Important)](#theta-%CE%B8-important)
+- [Omega Ω (Not important)](#omega-Ω-not-important)
+- [Theta Θ (Important)](#theta-Θ-important)
 - [Formal Definitions - Summary](#formal-definitions---summary)
-- [O vs Θ](#o-vs-%CE%B8)
+- [O vs Θ](#o-vs-Θ)
 - [Test Your Understanding](#test-your-understanding)
 - [Asymptotic Complexity classes](#asymptotic-complexity-classes)
 - [Calculating Algorithm Efficiency](#calculating-algorithm-efficiency)
@@ -227,6 +227,22 @@ False. E.g. Mergesort is strictly Θ(n log n)
 False. x might be ∈ O(n) but it might not be. E.g. Mergesort
 </details>
 
+**How would you prove that Θ (n + log n) = Θ (n)**
+<details>
+<summary>View answer</summary>
+
+```
+Θ(2n) = Θ(n)
+    n + log n < n + n
+=>  n + logn < 2n
+=>  Θ(n + logn) not a worse efficiency class
+Θ(n + log n) not a better efficiency class
+```
+So must be the same efficiency class
+
+</details>
+
+
 # Asymptotic Complexity classes
 ![Asymptotic Complexity Classes](img/complexities.png)
 
@@ -255,12 +271,12 @@ It gets the maximum value
 This example's basic operation is to check the value at a position in the array vs the current maximum value (MysteryVal) and return the maximum value in the array. Or:
 `A[i] > MaxVal`
 
-Let `c(n) = number of times it has executed`
+Let `c(n)` = number of times it has executed
 
 ![Times Executed](img/timesExecuted.png)
 
 # Maths
-Page 88-89 in the textbook TODO, which textbook
+Some maths to know 
 
 ![Maths](img/maths.png)
 
@@ -268,11 +284,11 @@ Page 88-89 in the textbook TODO, which textbook
 
 ![Maths 3](img/maths3.png)
 
-This means that if you add 1 *n* times, you will simply get n
+:point_up_2: This means that if you add 1 *n* times, you will simply get n
 
 ![Maths 4](img/maths4.png)
 
-This means that `1+2+3+4+5+...+n-1+n` = `n(n+1)/2`
+:point_up_2: This means that `1+2+3+4+5+...+n-1+n` = `n(n+1)/2`
 
 # Set Example
 Think up algorithms to determine if there are duplicate values in array A. Find out if it is a set, the time complexities of the solution and the most efficient solution.
@@ -294,7 +310,7 @@ The above solution can be broken down into the following format `(n-1 + n-2 + n-
 
 Therefore, the worst case is Θ(n<sup>2</sup>), and the average case is that too.
 
-TODO Add section here with maths
+![Set](img/set.png)
 
 ## Decrease & Conquer
 ```java
@@ -331,6 +347,8 @@ It runs the sort, then the for loop so this is Θ(nlogn+n), the worst case order
 
 The transform and conquer method of sorting then searching to test for a set is faster than the brute force method.
 
+I have added the python code for this [here](examples/python/set.py)
+
 # Analysing Recursive Factorial
 ```python
 int F(n){
@@ -339,8 +357,9 @@ int F(n){
     return F(n-1)*n;
 }
 ```
-* We want to count the multiplication. 
+* We want to count the multiplication
 * Multiplies once for every recursive call
+* Code can be found [here](examples/python/Factorial.py)
 ```
 M(0)=0
 And M(n)=M(n-1)+1

@@ -31,6 +31,8 @@ BUT
 * Given two positive integers m and n, find their greatest common divisor
 * E.g.: GCD(60,24) =12
 
+I have fleshed these methods out in a [python file](examples/python/GCD.py).
+
 **Euclid's Solution**
 ```java
 int gcd(int m, int n){
@@ -97,14 +99,6 @@ Another representation of the above 6 steps:
 * Simplicity
 * Generality: range of inputs, special cases
 * Optimality: no other algorithm can do better
-# History
-* 1600 BC - Babylonians developed algorithms for factorization and square roots
-* Euclid developed numerous algorithms
-* Printing press, invented by Gutenberg in 1448, as the most important invention in history.
-* Fibonacci
-    * Leonard Fibonacci, Italian
-    * Responsible for introducing the decimal system in the 15th century.
-    * Also made the Fibonacci series.
 # Typical Algorithmic Problems
 * Sorting and Searching
 * String Processing
@@ -131,9 +125,13 @@ Another representation of the above 6 steps:
     * Break problem into overlapping subproblems
 * Greedy
     * Repeatedly do what is best now
-* Iterative Improvement
-# Algorithm Example:
-Here is an extremely inefficient example of the fibonacci algorithm - brute force
+
+# Fibonacci
+Leonard Fibonacci, introduced the decimal system to the west in the 15th century. He also defined the fibonacci series:
+
+![Fibonacci](img/fib.png)
+
+Here is an extremely inefficient, brute force, example of the fibonacci algorithm 
 ```java
 public long fibo(long n){
     if (n==0){
@@ -187,8 +185,7 @@ public long fibo(in n){
 }
 ```
 While it may look extremely efficient it wil be incorrect from a value of 43 onwards as Fibo(43) wil give 433494436 and the correct answer 433494437.
-
-Using Java it calculates Fibo up to 43 correctly. But for Fibo(43) and onwards it gets increasingly worse. This is due to floating point precision. [There is a fourth solution on page 109 of the Dasgupta textbook TODO]()
+Using Java it calculates Fibo up to 43 correctly. But for Fibo(43) and onwards it gets increasingly worse. This is due to floating point precision. 
 
 # Puzzle
 **Problem**:
@@ -251,6 +248,3 @@ This solution is inadequate that falsely assumes certain inputs:
 * Is not optimal for all inputs e.g.: {1,20,21,22}
     * Can you quantify the nature of these inputs? Suggest an alternative
 
-Final Solution:
-
-**TODO**

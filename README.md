@@ -18,9 +18,9 @@ The [pracs 📁](pracs) has information about the different practicals.
 
 The books used for this course :books:
 * [Introduction to the Design & Analysis of Algorithms](http://www.vgloop.com/f-/1394454921-126688.pdf) - Anany Levitin
-* [Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms.html) - Sanjoy Dasgupta, Christos Papadimitriou & Umesh Vazirani
+* [Algorithms](http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf) - Sanjoy Dasgupta, Christos Papadimitriou & Umesh Vazirani
 * [Art of Computer Programming](http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf) - Donald E. Knuth
-* [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/full-text/book/book.html) - Harold Abelson, Gerald Jay Sussman & Julie Sussman
+* [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf) - Harold Abelson, Gerald Jay Sussman & Julie Sussman
 
 # Contributors ❤️
 Thanks for helping out with this repo!
