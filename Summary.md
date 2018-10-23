@@ -75,3 +75,39 @@ Another representation of the above 6 steps:
 * O is an upper bound on performance
 * Θ is a tight bound
     * It is the upper and lower bound
+
+# Brute Force
+A straightforward approach usually directly based on problem statement and definitions
+* Crude but often effective
+* Simple
+* Widely Applicable
+* Sometimes impractically slow
+* Try all the possibilities until problem solved
+* Loop through each possibility, check if it solves problems
+
+## Pros and Cons of Brute Force
+* Strengths 
+    * Wide applicability
+    * Simplicity
+    * Yields reasonable algorithm for some important problems and standard algorithms for simple computational tasks
+    * A good yardstick for better algorithms
+    * Sometimes doing better is not worth the bother
+* Weakness
+    * Rarely produces efficient algorithms
+    * Some brute force algorithms are infeasibly slow
+    * Note as creative as some other design techniques
+
+# Exhaustive Search
+* Definition
+    * A brute force solution to the search for an element with a special property
+    * Usually among combinatorial objects such a permutations or subsets
+    * Suggests generating each and every element of the problem's domain
+* Method
+    1. Construct a way of listing all potential solutions to the problem in a systematic manner
+    2. Evaluate all Solutions one by one (disqualifying infeasible ones) keeping track of the best one found so far
+    3. When search ends, announce the winner
+## Comments on Exhaustive Search
+* Exhaustive search algorithms run in a realistic amount of time **only on very small instances**
+* In many cases there are much better alternatives!
+* In some cases exhaustive search (or variation) is the only known solution
+* and parallel solutions can speed it up

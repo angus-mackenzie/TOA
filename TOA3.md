@@ -69,7 +69,7 @@ This will be a walkthrough of the Towers of Hanoi in order to better understand 
 void hanoi(int n, int source, int spare, int dest){
     if(n>0){
         hanoi(n-1, source, det, spare);
-        cout << "Move disk from " << source << " to "" << dest << endl;
+        cout << "Move disk from " << source << " to " << dest << endl;
         hanoi(n-1,spare,source,dest);
     }
 }
@@ -112,7 +112,7 @@ A straightforward approach usually directly based on problem statement and defin
 * Try all the possibilities until problem solved
 * Loop through each possibility, check if it solves problem
 
-## String Search
+# String Search
 Brute force pattern match
 
 *SEE SHE SEA* and we are searching for *SEA*
@@ -134,7 +134,7 @@ for k <- 0 to n-m do {//for reach char in T
 }
 return -1;
 ```
-
+My python version of this is [here](examples/python/stringsearch.py)
 ## Worst Case Brute Force
 * Worst case: the search string matches every character except the last, for every iteration of the outer loop.
     * E.g.: text = "aaaaaaaaaaaaaaaaaa"
@@ -156,8 +156,8 @@ return -1;
     * All characters are found to match (successful search):
     * A mismatch detected
 3. WHILE pattern is not found and the text is not yet exhausted, realign pattern one position to the right and repeat step 2
-4. 
-## Closest Pair
+
+# Closest Pair
 * Problem
     * Find the two ints that are closest together in a set of 2-D points P<sub>1</sub> = (x<sub>1</sub>,y<sub>1</sub>),..,P<sub>n</sub> = (X<sub>n</sub>,Y<sub>n</sub>)
 * Algorithm
@@ -173,6 +173,8 @@ for i <- 1 to n-1 do
 return index1, index2
 ```
 * Efficiency: Θ(n<sup>2</sup>)
+
+My code for this is [here](examples/python/closestpair.py)
 ## Convex Hull Problem
 * Problem
     * Find the convex hull enclosing n 2-D points
@@ -203,9 +205,9 @@ return index1, index2
     * Suggests generating each and every element of the problem's domain
 * Method
     1. Construct a way of listing all potential solutions to the problem in a systematic manner
-        * All Solutions one by one (disqualifying infeasible ones) keeping track of the best one found so far
-        * When search ends, announce the winner
-# Travelling Salesman Problem
+    2. Evaluate all Solutions one by one (disqualifying infeasible ones) keeping track of the best one found so far
+    3. When search ends, announce the winner
+## Travelling Salesman Problem
 * Problem
     * Given n cities with known distances between each pair
     * Find the shortest tour that passes through all the cities exactly once before returning to the starting city
@@ -222,7 +224,7 @@ return index1, index2
     * Remove tours that differ only in direction
 * Efficiency
     * `(n-1)!/2 = O(n!)`
-# Assignment Problem
+## Assignment Problem
 * Assignment Problem
 * n people and n jobs to be done
 * Each person is assigned to do exactly one job
@@ -230,3 +232,74 @@ return index1, index2
 * The cost of person i doing job j is C[i,j]
 * Find a job assignment with the minimum cost
 
+||Job 1|Job 2|Job 3|Job 4|
+|---|---|---|---|--|
+|Person|9|2|7|8|
+|Person|6|4|3|7|
+|Person|5|8|1|8|
+|Person|7|6|9|4|
+
+||Job 1|Job 2|Job 3|Job 4|
+|---|---|---|---|--|
+|1-2-3-4|Person 1|Person 2|Person 3|Person 4|
+|1-2-4-3|Person 1|Person 2|Person 4|Person 3|
+|1-3-2-4|Person 1|Person 3|Person 2|Person 4|
+|1-2-4-2|Person 1|Person 3|Person 4|Person 2|
+
+**Solution**
+* Generate all permutations of n positive integers
+* Compute the total cost for that assignment
+* Retain the cheapest assignment
+* Very inefficient
+
+## Knapsack Problem
+* **Problem** Given n items
+    * Weights: w<sub>1</sub>, w<sub>2</sub> ... w<sub>n</sub>
+    * values: v<sub>1</sub>, v<sub>2</sub>  .... v<sub>n</sub>
+    * A knapsack of capacity W
+    * Find the most valuable subset of the items that fit into the knapsack
+* Example W = 16
+
+|Item|Weight|Value|
+|---|---|---|
+|1|2kg|R200|
+|2|5kg|R300|
+|3|10kg|R500|
+|4|5kg|R100|
+
+**Exhaustive Search Knapsack**
+
+
+|Subset|Total Weight|Total Value|
+|---|---|---|
+|1|2kg|R200|
+|2|5kg|R300|
+|3|10kg|R500|
+|4|5kg|R100|
+|1,2|7kg|R500|
+|1,3|12kg|R700|
+|1,4|7kg|R300|
+|2,3|15kg|R800|
+|2,4|10kg|R600|
+|3,4|10kg|R400|
+|1,2,3|17kg|n/a|
+|1,2,4|12kg|R600|
+|1,3,4|17kg|n/a|
+|2,3,4|20kg|n/a|
+|1,2,3,4|22kg|m/a|
+
+**Efficiency** Ω(2<sup>n</sup>)
+
+## Comments on Exhaustive Search
+* Exhaustive search algorithms run in a realistic amount of time **only on very small instances**
+* In many cases there are much better alternatives!
+* In some cases exhaustive search (or variation) is the only known solution
+* and parallel solutions can speed it up
+
+# Summary
+* Convex hull & Closest pair:
+    * All possibilities iterated with nested loops
+* Travelling salesman & Job assignment:
+    * All possibilities are all possible permutations
+* Knapsack problem
+    * All possibilities are all the subsets (combinations) of the choices

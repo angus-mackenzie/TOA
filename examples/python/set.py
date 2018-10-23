@@ -2,7 +2,7 @@
 # Algorithms to determine if there are duplicate values in array A
 
 # Brute Force
-def isSet(A):
+def BFisSet(A):
         for i in range(len(A)):
             for j in range(i+1,len(A)):
                     if(A[i]==A[j]):
@@ -10,13 +10,13 @@ def isSet(A):
         return True
 
 # Decrease & Conquer - Terrible
-def isSet(A,index):
+def DCisSet(A,index):
         if(index >= len(A)-1):
                 return True
         for i in range(index+1, len(A)):
                 if(A[i]==A[index]):
                         return False
-        return isSet(A,index+1)
+        return DCisSet(A,index+1)
 
 # Transform & Conquer - Faster than BF
 def TCisSet(A):
