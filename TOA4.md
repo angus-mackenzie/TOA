@@ -62,7 +62,7 @@ for(int row = 0; row<n; row++){
     }
 }
 ```
-
+Add matrix A to matrix B to get matrix C - Θ(n<sup>2</sup>)
 ## Matrix Multiplication
 ![Matrix Multiplication](img/matrixmult1.gif)
 
@@ -76,4 +76,11 @@ for(int row = 0; row<n; row++){
     }
 }
 ```
-There are n multiplication to calc each of the n<sup>2</sup> values
+There are n multiplication to calculate each of the n<sup>2</sup> values - Θ(n<sup>3</sup>)
+
+How many multiplications:
+![Matrix Multiplication Sigma](img/matrixmult2.gif)
+
+Applying the rules we learned, we get:
+
+![Matrix Multiplication Aggregate](img/matrixmult3.gif)
