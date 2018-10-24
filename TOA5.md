@@ -1,6 +1,15 @@
 - [Decrease & Conquer](#decrease--conquer)
 - [Decrease by a Constant Factor](#decrease-by-a-constant-factor)
 - [Examples](#examples)
+    - [Insertion Sort](#insertion-sort)
+    - [Graph Searching](#graph-searching)
+        - [Representing Graphs](#representing-graphs)
+        - [Traversing Graphs](#traversing-graphs)
+        - [Efficiency](#efficiency)
+        - [Differences](#differences)
+        - [Use Cases](#use-cases)
+    - [Generating Permutations](#generating-permutations)
+        - [Johnson Trotter Method](#johnson-trotter-method)
     - [Topological Sorting Algorithm](#topological-sorting-algorithm)
 - [Multiplication a la Russe](#multiplication-a-la-russe)
 - [Euclid's GCD](#euclids-gcd)
@@ -27,8 +36,9 @@
 # Examples
 * Decrease by a constant (usually 1):
     * [Insertion sort](#insertion-sort)
-    * Graph Searching: DFS, BFS
-    * Generating permutations and subsets
+    * [Graph Searching: DFS, BFS](#graph-searching)
+    * [Generating permutations](#generating-permutations)
+    * [Generating subsets]()
     * [Topological sort](#topological-sorting-algorithm)
 * Decrease by a constant factor (usually 2):
     * Binary Search
@@ -40,8 +50,95 @@
     * Finding the k'th order statistic e.g.: the median
 ## Insertion Sort
 ![Insertion Sort](img/insertionsort.png)
+## Graph Searching
+### Representing Graphs
+* 2 Ways: Adjacency Matrix or Adjacency List
 
-## Generating Permutation
+Adjacency Matrix
+* Prefer if graph is dense
+* In an undirected graph, the adjacency matrix will be symmetric (about the diagonal)
+* For a weighted graph, instead of 1s you could us weights between the vertices
+
+![Adjacency Matrix](img/adjacencymatric.png)
+
+Adjacency List
+
+![Adjacency List](img/adjacencylist.png)
+
+Both of these depict the same graph:
+![Graph](img/graph.png)
+
+### Traversing Graphs
+* Depth First
+* Breadth First
+
+Depth First vs Breadth First
+
+![DepthvBreadth](img/depthvbreadth.png)
+
+**Depth First**
+```
+DepthFirst(Graph G with set vertices V & edges E):
+    mark all vertices with 0
+    count = 0
+    for each vertex v in V:
+        if v is marked with 0:
+            dfs(v)
+
+dfs(v):
+    ++count
+    mark v with count
+    for each vertex w adjacent to v:
+        if w is marked with a 0:
+            dfs(w)
+```
+
+Depth first search gives two orders
+* Order in which nodes were visited
+    * Represented by the `count` variable
+* Order in which vertices were *popped* off the stack
+
+**Breadth First**
+```
+BreadthFirst is identical to DepthFirst except it calls bfs instead of dfs:
+
+bfs(v):
+    ++count
+    mark v with count
+    create a new queue and insert v
+    while the queue is not empty:
+        for each vertex w adjacent to front vertex:
+            if w is marked with 0:
+            ++count
+            mark w with count
+            add w to the queue
+        remove the front vertex from the queue
+```
+Breadth first only gives one ordering
+* Order in which vertices are counted is the same as order in which they are removed from the queue
+
+There is walthrough of both of these algorithms in the slides, I have added it to the repo [here](docs/BFS&DFS.pdf)
+### Efficiency
+* Both algorithms are:
+    * For adjacency matrix Θ(|V|<sup>2</sup>)
+    * For adjacency list: Θ(|V|+|E|)
+        * Where |V| - number of vertices
+        *       |E| - number of edges
+### Differences
+* Depth first uses a stack
+    * Implicit in recursive implementation
+* Breadth first uses a queue
+* Depth first creates two orderings
+* Breadth first produces only one ordering
+
+### Use Cases
+* To find the fewest roads to get from point A to point B for your application?
+    * Fewest roads not necessarily equal to shortest distance
+        * Shortest distance is a different problem
+    * Breadth first search easily finds fewest edges
+* A chess program
+    * There is a modification of depth-first search called MINIMAX
+## Generating Permutations
 * input:
     * `{1,2,3}`
 * output:
@@ -100,6 +197,17 @@ Thus, we can see that the Johnson Trotter method allows us to compute the permut
 
 ## Topological Sorting Algorithm
 ![Topological Sorting](img/topologicalsorting.png)
+
+![Topological Sorting](img/topologicalsorting1.png)
+
+* Remember that depth first search gives two orderings:
+    * Order vertex pushed onto stack
+    * Order popped off
+* The reverse of the order in which they are popped off is topologically sorted list
+* If when popping vertex v, there is an edge from u to v and u has already been popped - we have a cycle.
+* In the image above, without red dashed line, popped order is: C5, C4, C3, C1, C2
+* Topological ordering = C2, C1, C3, C4, C5
+* Note that C1, C2, C3, C4, C5 is also a valid topological ordering
 
 * Problem
     * Among n coins, one is fake (and weighs less)
