@@ -111,3 +111,28 @@ A straightforward approach usually directly based on problem statement and defin
 * In many cases there are much better alternatives!
 * In some cases exhaustive search (or variation) is the only known solution
 * and parallel solutions can speed it up
+
+# Master Theorem
+If we have a recurrence of this form:
+
+T(n) = aT(n/b) + f(n) and f(n) ∈ Θ (n<sup>2</sup>) then:
+* T(n) ∈ Θ(n<sup>d</sup>) if a < b<sup>d</sup>
+* T(n) ∈ Θ(n<sup>d</sup>logn) if a = b<sup>d</sup>
+* T(n) ∈ Θ(n<sup>log<sub>b</sub>a</sup>) if a > b<sup>d</sup>
+
+# Divide & Conquer
+* Divide & Conquer is the best known algorithm design strategy:
+    1. Divide instances of problem into two or more smaller instances
+    2. Solve smaller instances recursively
+    3. Obtain solution to original (larger) instance by combining these solutions
+
+# Decrease & Conquer
+* Decrease by a constant
+* Decrease by a constant factor
+* Variable size decrease
+
+# Decrease by a Constant Factor
+1. Reduce problem instance to smaller instance of the same problem and extend solution
+2. Solve smaller instance
+3. Extend solution of smaller instance to obtain solution to original problem
+    *  Also called inductive or incremental

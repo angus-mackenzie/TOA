@@ -13,6 +13,8 @@ Here are summaries of slides :eyeglasses:
 * [Introduction](TOA1.md)
 * [Algorithm Efficiency](TOA2.md)
 * [Brute Force](TOA3.md)
+* [Divide & Conquer](TOA4.md)
+* [Decrease & Conquer](TOA5.md)
 
 The [pracs 📁](pracs) has information about the different practicals.
 
