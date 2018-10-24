@@ -122,8 +122,8 @@ There is walthrough of both of these algorithms in the slides, I have added it t
 * Both algorithms are:
     * For adjacency matrix Θ(|V|<sup>2</sup>)
     * For adjacency list: Θ(|V|+|E|)
-        * Where |V| - number of vertices
-        *       |E| - number of edges
+        * |V| - number of vertices
+        * |E| - number of edges
 ### Differences
 * Depth first uses a stack
     * Implicit in recursive implementation
@@ -178,7 +178,9 @@ There is walthrough of both of these algorithms in the slides, I have added it t
 * return the list of permutations
 
 Example: given 123, find all the permutation
-||||
+
+
+| | | |
 |---|---|---|
 |←|←|←|
 |1|2|3|
