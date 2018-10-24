@@ -1,10 +1,13 @@
 # Theory of Algorithms
-These notes were compiled during my Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that I deemed useful. 
+These notes were compiled during our Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that was deemed useful. 
 
-Hence, these notes were taken & adapted from slides and lectures created by the following people: 
+Before adding to this repository - please check out the [Contributing Guidelines](Contributing.md) 📐 and if you want to help out please check out the [Project Board](https://github.com/AngusTheMack/TOA/projects/1) for this repo 🅱️
+
+These notes were taken & adapted from slides and lectures created by the following people: 
 * [Sonia Berman](http://www.hpi.cs.uct.ac.za/sonia)
 * [James Gain](https://people.cs.uct.ac.za/~jgain/)
 * [Nathan Geffen](https://www.researchgate.net/profile/Nathan_Geffen)
+* [Thomas Meyer](http://www.cair.za.net/people/tommie-meyer)
 
 Here are summaries of slides :eyeglasses:
 * [Introduction](TOA1.md)
@@ -20,8 +23,9 @@ The books used for this course :books:
 * [Art of Computer Programming](http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf)
 * [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/full-text/book/book.html)
 
-Before adding to this repository - please check out the [Contributing](Contributing.md) file 📁
-
 # Contributors ❤️
 Thanks for helping out with this repo!
 * [Michael White](https://github.com/MikeJamesWhite) 📷
+* [Charl Ritter](https://github.com/CharlRitter) 💹
+* [Jana Wessels](https://github.com/Jana-Wessels) 💯
+* [Scott Hallauer](https://github.com/scotthallauer) 🛴
