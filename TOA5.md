@@ -11,13 +11,13 @@
     - [Generating Permutations](#generating-permutations)
         - [Johnson Trotter Method](#johnson-trotter-method)
     - [Topological Sorting Algorithm](#topological-sorting-algorithm)
-- [Multiplication a la Russe](#multiplication-a-la-russe)
+    - [Coin Problem](#coin-problem)
+    - [Multiplication a la Russe](#multiplication-a-la-russe)
 - [Euclid's GCD](#euclids-gcd)
     - [Variable-Size Decrease](#variable-size-decrease)
 - [Finding the k'th order statistic](#finding-the-kth-order-statistic)
-- [Linear Interpolation Sort](#linear-interpolation-sort)
-- [Strengths and Weaknesses of Decrease and Conquer](#strengths-and-weaknesses-of-decrease-and-conquer)
-- [Transform and Conquer](#transform-and-conquer)
+    - [Linear Interpolation Sort](#linear-interpolation-sort)
+- [Strengths and Weaknesses of Decrease & Conquer](#strengths-and-weaknesses-of-decrease--conquer)
 
 # Decrease & Conquer
 * Decrease by a constant
@@ -220,18 +220,35 @@ Thus, we can see that the Johnson Trotter method allows us to compute the permut
 * Can we do better?
     * Decrease by factor of three
 
-# Multiplication a la Russe
+## Coin Problem
+* Problem   
+    * Among n coins, one is take (and weighs less)
+    * We have a balance scale which can compare any two sets
+* Algorithm
+    * Divide into twi sizes [n/2] piles (keeping a coin aside if n is odd)
+    * If they weigh the same then the extra coin is fake
+    * Otherwise proceed recursively with the lighter pile
+* Efficiency
+    * W(n) = W(n/2) + 1 for n > 1
+    * W(n) = log<sub>2</sub>n = Θ(log<sub>2</sub>n)
+* Can you do better?
+## Multiplication a la Russe
 When someone invaded Russia they realized that the Russians did not multiply like they did, rather they used the following method:
 * `n * m (n/2) * (2m)` <- even
 * `((n-1)/2)*(2m)*m` <- odd
 
 Using doubling and halving instead of multiplication is efficient in hardware as it is just shift operations.
 
+We are decreasing the problem by a constant factor of 2 every time
+
 # Euclid's GCD
 Covered this problem initially in the [first lecture](TOA1.md), but it is a good example of Variable-Size Decrease.
 ## Variable-Size Decrease
 * Problem
     * Greatest Common Divisor of two integers `m` and `n` is the largest integer that divides both exactly
+* Alternative Solutions
+    * Consecutive integer checking (brute force)
+    * Identify common prime factors (transform and conquer)
 * Euclid's Solution
     * `gcd(m,n) = gcd(n,m mod n)`
     * `gcd(m,0) = m`
@@ -242,23 +259,33 @@ Covered this problem initially in the [first lecture](TOA1.md), but it is a good
     * This is a variable-size decrease as changing the `n` and `m` around 
 # Finding the k'th order statistic
 E.g.: Finding the median. Can use a decrease and 
-
-# Linear Interpolation Sort
+* Finding the k'th smallest element in a list
+* Sorting the list is inefficient
+* We can use quicksort to partition as usual (into <= pivot and >= pivot)
+* Since the pivot ends up in its correct final position, we only need to continue with one of the 2 partitions
+    * if pivot ends up >= k'th position, search the first partition, else search the 2<sup>nd</sup>)
+## Linear Interpolation Sort
 Variable Size Decrease, depends on the particular string you are looking for.
-* Assume values between leftmost (A[b]) and rightmost (A[u]) elements increase linearly
-* To find v
-    * Binary Search with "Floating variables" at index i
-    * Setup straight line through (b, A[b]) and (u,A[u])
+* Mimcs the way humans search through a phone book (e.g.: looking near the beginning for 'Brown')
+* Assume values between leftmost (A[l]) and rightmost (A[r]) elements increase linearly
+* Algorithm (key = v, find search index = i)
+    * Binary search with floating variable ad index i
+    * Setup straight line through (l, A[l]) and (r,A[r])
     * Find point P = (x,y) on line at y = v, then i = x
-    * x = b + ...
+* Efficiency:
+    * Average = Θ(loglogn + 1)
+    * Worst = Θ(n)
 
-log(logn) efficiency <- Proof
+![Interpolation Search](img/interpolationsearch.png)
 
-# Strengths and Weaknesses of Decrease and Conquer
 
-# Transform and Conquer 
-This should probably be in the next summary
-* Pre-sorting
-    * Closest pair
-    * Convex hull
-    * 
+* log(logn) efficiency <- Proof
+
+# Strengths and Weaknesses of Decrease & Conquer
+Strengths
+* Can be implemented either top down (recursively) or bottom up (without recursion)
+* Often very efficient (possibly Θ(logn))
+* Leads to a powerful form of graph traversal (breadth and depth first search)
+
+Weakness
+* Less widely applicable (especially decrease by a constant factor)

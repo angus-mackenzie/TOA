@@ -131,8 +131,17 @@ T(n) = aT(n/b) + f(n) and f(n) ∈ Θ (n<sup>2</sup>) then:
 * Decrease by a constant factor
 * Variable size decrease
 
-# Decrease by a Constant Factor
+## Decrease by a Constant Factor
 1. Reduce problem instance to smaller instance of the same problem and extend solution
 2. Solve smaller instance
 3. Extend solution of smaller instance to obtain solution to original problem
     *  Also called inductive or incremental
+
+## Strengths and Weaknesses of Decrease & Conquer
+Strengths
+* Can be implemented either top down (recursively) or bottom up (without recursion)
+* Often very efficient (possibly Θ(logn))
+* Leads to a powerful form of graph traversal (breadth and depth first search)
+
+Weakness
+* Less widely applicable (especially decrease by a constant factor)
