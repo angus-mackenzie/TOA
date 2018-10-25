@@ -145,3 +145,26 @@ Strengths
 
 Weakness
 * Less widely applicable (especially decrease by a constant factor)
+
+# Transform and Conquer 
+> The secret of life is to replace one worry with another
+
+👆 Charles M. Schultz
+
+![Transform & Conquer](img/transformandconquer.png)
+
+Different types of transformations:
+1. Instance simplification = a more convenient instance of the same problem
+    * Presorting
+    * Gaussian elimination
+2. Representation Change = a different representation of the same instance
+    * Balanced search trees
+    * Heaps and heapsort
+    * Polynomial evaluation by Horner's rule
+    * Binary exponentiation
+3. Problem reduction = a different problem altogether
+    * Lowest Common Multiple
+    * Reductions to graph problem
+* Pre-sorting
+    * Closest pair
+    * Convex hull

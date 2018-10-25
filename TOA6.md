@@ -1,12 +1,17 @@
 - [Transform and Conquer](#transform-and-conquer)
 - [Instance Simplification](#instance-simplification)
     - [Presorting](#presorting)
-- [Representation Chance](#representation-chance)
+- [Representation Change](#representation-change)
     - [Trees](#trees)
     - [Heapsort](#heapsort)
     - [Calculating Polynomials](#calculating-polynomials)
         - [Brute Force Polynomial](#brute-force-polynomial)
         - [Horner's Rule](#horners-rule)
+    - [Binary Exponentiation](#binary-exponentiation)
+- [Problem Reduction](#problem-reduction)
+    - [Lowest Common Multiple](#lowest-common-multiple)
+    - [Reduction to Graph Problems](#reduction-to-graph-problems)
+- [Strengths and Weaknesses of Transform & Conquer](#strengths-and-weaknesses-of-transform--conquer)
 
 # Transform and Conquer 
 > The secret of life is to replace one worry with another
@@ -16,20 +21,17 @@
 ![Transform & Conquer](img/transformandconquer.png)
 
 Different types of transformations:
-1. Instance simplification = a more convenient instance of the same problem
-    * Presorting
+1. [Instance simplification](#instance-simplification) = a more convenient instance of the same problem
+    * [Presorting](#presorting)
     * Gaussian elimination
-2. Representation Change = a different representation of the same instance
-    * Balanced search trees
-    * Heaps and heapsort
-    * Polynomial evaluation by Horner's rule
-    * Binary exponentiation
-3. Problem reduction = a different problem altogether
-    * Lowest Common Multiple
-    * Reductions to graph problem
-* Pre-sorting
-    * Closest pair
-    * Convex hull
+2. [Representation Change](#representation-change) = a different representation of the same instance
+    * [Balanced search trees](#trees)
+    * [Heaps and heapsort](#heapsort)
+    * [Polynomial evaluation by Horner's rule](#calculating-polynomials)
+    * [Binary exponentiation](#binary-exponentiation)
+3. [Problem reduction](#problem-reduction) = a different problem altogether
+    * [Lowest Common Multiple](#lowest-common-multiple)
+    * [Reduction to Graph Problems](#reduction-to-graph-problems)
 
 # Instance Simplification
 ## Presorting
@@ -79,7 +81,7 @@ else if s< k:
 else if s>k repeat with sublist A[1], ..., A[s-1]
 ```
 
-IF we look at this algorith:
+IF we look at this algorithm:
 * the presorting based one is Θ(nlogn) + Θ(1) = Θ(nlogn)
 * The partitioning based algorithm (which is variable size decrease & conquer)
     * Worst case T(n) = T(n-1) + (n+1) ∈ Θ (n<sup>2</sup>)
@@ -90,7 +92,7 @@ IF we look at this algorith:
 * Conclusion
     * Presorting does not help in this case
 
-# Representation Chance
+# Representation Change
 ## Trees
 * Searching, insertion and deletion in a  Binary Search Tree:
     * Balanced = Θ(logn)
@@ -134,4 +136,77 @@ p(x) = 2x<sup>4</sup> - x<sup>3</sup> + 3x<sup>2</sup> + x - 5
 =((2x<sup>2</sup> - x + 3)x+1)x-5
 =(((2x-1)x+3)x+1)x-5</p>
 Here is another example:
-p(x) = 2x<sup>3</sup> 
+p(x) = 2x<sup>3</sup> - x<sup>2</sup> - 6x + 5
+     = (2x<sup>2</sup>-x-6)x + 5
+     = ((2x-1)x-6)x+5
+
+Find p(x) at x = 3
+    2x<sup>3</sup>  -x<sup>2</sup>  -6x +5
+c[]:2               -1              -6  +5
+p:  2 2\*3+(-1)= 5 5\*3 + (-6) = 9 9\*3 + 5 = 32
+
+```
+double horner(coefficients[0 .. n],x){
+    p = coefficients[n]
+    for i = n-1 to 0:
+        p = x\*p + coefficients[i]
+    return p
+}
+```
+
+* Horner's rule addresses the problem of evaluating a polynomial p(x) = a<sub>n</sub>x<sup>n</sup> + a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>1</sub> +a<sub>0</sub> at a given point x = x<sub>
+0</sub>
+* Re invested by W. Horner in early 19th Century
+* Approach
+    * Convert p(x)
+* Algorithm
+
+```
+p=P[n]
+for i <- n-1 downto 0:
+    p <- x * p + P[i]
+return p
+```
+![Horner's Rule](img/hornerrule.png)
+
+The slides go into Horner's rule in a lot more depth [here](docs/HornersRule.pdf)
+
+## Binary Exponentiation
+![Binary Exponentiation](img/binaryexponentiation.png)
+
+# Problem Reduction
+* If you need to solve a problem reduce it to another problem that you know how to solve
+* Used in Complexity Theory to classify problems
+* Computing the Least Common Multiple
+    * The LCM of two positive integers m and n is the smallest integer divisible by both m and n
+    * Problem reduction is to say LCM(m,n) = m * n / GCD(m,n)
+    * Example: LCM(24,60) = 1440 / 12 = 120
+* Reduction of Optimisation Problems
+    * Maximization problems seek to find a function's maximum. Conversely, minimization seeks to find the minimum
+    * Can reduce between: min f(x) = -max[-f(x)]
+## Lowest Common Multiple
+LCM(24,60) = ?
+* 24 = 2 x 2 x 2 x 3
+* 60 = 2 x 2 x 3 x 5
+* LCM(24,60) = 2 x 2 x 3 x 2 x 5
+
+Better?
+* LCM(m,n) = (m*n)/GCD(m,n)
+
+## Reduction to Graph Problems
+* State-Space graphs
+    * Vertices represent states and edges represent valid transitions between states
+    * Start and goal vertices
+    * Widely used in AI
+* Example
+
+River Crossing Puzzle [**P**easant, **W**olf, **G**oat, **C**abbage]
+
+![Bridge Crossing Problem](img/bridgeproblem.png)
+
+# Strengths and Weaknesses of Transform & Conquer
+* Strengths
+    * Allows powerful data structures to be applied
+    * Effective in Complexity Theory
+* Weaknesses
+    * Can be difficult to derive (especially reduction)
