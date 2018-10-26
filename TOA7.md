@@ -285,15 +285,160 @@ MY AEROPLANE
 ### Good Suffix Rule Cases
 * Case 1: The matching suffix does not occur elsewhere in the pattern
 * Case 2: The matching suffix does occur elsewhere in the pattern
-* Case 3: A part of the matching suffix occurs at the beginning of the pattern (this happens only if the oattern has a suffix matching a prefix - e.g.: patterns like EMBLEM OR CHAOTIC OR POMPOM)
+* Case 3: A part of the matching suffix occurs at the beginning of the pattern (this happens only if the pattern has a suffix matching a prefix - e.g.: patterns like EMBLEM OR CHAOTIC OR POMPOM)
 
-**Further Example** Create the shift table for ERBER
-|B|R|E|
+#### Example 1
+Consider this text and pattern:
+```
+..ABAB...
+MAOBAB
+```
+* k = 3 (the number of matched chars)
+* Consider the suffix BAB, which is suff(3)
+* Nowehere else in the pattern is there a BAB
+* So we can shift the entire pattern
+#### Example 1b
+Consider this text and pattern
+```
+....ABAB...
+OBABOBAB
+```
+* k = 3
+* Here bab does occur previously in the pattern, but - it is preceded by the same mismatched letter, o.
+* So there can't possibly be a match and we can shift the entire pattern
+
+#### Example 2
+Consider this text and pattern
+```
+....ABAB...
+ABABCBAB
+```
+* Here the suffix does recur, with a letter not equal to C, i.e.: A.
+* We should shift the pattern as follows:
+```
+....ABAB....
+....ABABCBAB
+```
+#### Example 2b
+```
+....ABAB...
+ZBABCBAB
+```
+* The good suffix rule is not able to determine that the Z and the A do not match, and that we could have shifted the entire string. Thus, it will look as follows
+```
+....ABAB....
+    ZBABCBAB
+```
+#### Example 3
+Consider this text and pattern
+```
+.....ABAB...
+   ABCBAB
+```
+* Here the front letters match part of the suffix
+* So where we shift 4
+* This problem only occurs for a prefix of the pattern matching a suffix of the pattern
+```
+.....ABAB...
+       ABCBAB
+```
+
+### Good Shift Table Construction
+* k = # of matched chars from end of pattern
+* **Bold** is the part of the pattern matched
+* <u>underlined</u> the right most match to suffix
+* good_shift = distance to beginning of closest match
+
+|k|Pattern|good_shift|
 |---|---|---|
-|2|3|1|
-```
-Text:    ??SER
-PATTERN: ERBER
-```
-We ned to keep track how many we have matched, and subtract that from the amount we need to do. This is because in Boyer-moore you need to take into account the letters you have matched.
+|1|ABC<u>B</u>A**B**|2|
+|2|<u>AB</u>CB**AB**|4|
+|3|<u>AB</u>C**BAB**|4|
+|4|<u>AB</u>**CBAB**|4|
+|5|<u>A**B</u>CBAB**|4|
 
+* Length of pattern = m
+1. For each suffix of length k 
+    * Find starting index, j, of rightmost match to suffix that doesn't have the same preceding char
+    * If one is found, set good_shift entry G(k) = m-k-j
+2. For each suffix of length k not yet set
+    * Find longest prefix of size n that matches the suffix
+    * If one is found, set good_shift entry G(k) = distance between this matching prefix and suffix
+3. For each suffix of length k not yet set
+    * Set good_shift entry G(k) = m
+
+### Summary
+* Good-suffix shift:
+    * If k symbols matched before failing, shift the pattern up G(k) positions
+* Bad-symbol shift
+    * If k symbols matched before failing, shift the pattern up T(c) - k positions (where c is the character that didn't match)
+    * Actually shift = max(T(c)-k,1)
+* Algorithm:
+    1. Build tables T and G
+    2. When searching, use either bad-symbol shift or good-suffix shift, whichever is larger
+
+### Algorithm
+```
+1. Construct the bad character shift table
+2. Construct the good suffix shift table
+3. Align the pattern at start of text
+4. Repeat until match or end of text reached
+    Starting with the last character of the pattern compare corresponding characters in the text until either all m characters matched or there is a mismatch
+    in case of mismatch:
+        if k (number of matched chars) = 0
+            Shift using the bad char table
+        Else (k>0)
+            Shift using the larger of the good suffix and bad char tables
+```
+### Example Good-Suffix Tables
+Pattern BIGWIG
+
+|1|2|3|4|5|
+|---|---|---|---|---|
+|3|3|6|6|6|
+
+Pattern BAOBAB
+|1|2|3|4|5|
+|---|---|---|---|---|
+|2|5|5|5|5|
+
+### Examples
+Find BAOBAB in: `BESS KNEW ABOUT BAOBABS`
+* Bad Symbol Shift Table:
+
+|A|B|...|O|...|
+|---|---|---|---|---|
+|1|2|6|3|6|
+
+* Good Suffix Shift Table:
+
+|1|2|3|4|5|
+|---|---|---|---|---|
+|2|5|5|5|5|
+
+Find ZIGZAG in: `A ZIG, A ZAG, AGAIN A ZIGZAG`
+* Bad-Symbol Shift Table
+
+|A|...|G|...|I|...|Z|
+|---|---|---|---|---|---|--|
+|1|6|3|6|4|6|2|
+
+* Good Suffix Shift Table
+
+|1|2|3|4|5|
+|---|---|---|---|---|
+|3|6|6|6|6|
+
+# Time & Space
+* Horspool and Boyer Moore use additional space (the tables) to get a gain in speed
+* Also Horspool and Boyer Moore do preprocessing, which takes time. This is traded off with the reduced number of comparisons they have to make compared to brute-force.
+
+Cool way to test this yourself:
+* Download War & Peace from Guttenberg
+* Use a script to generate dozens of search strings of 4 to 6 chars each
+* Implement brute force and horspool
+* Both algorithms search for every occurrence of every pattern in War & Peace
+* Check your results, an implementation by Sonia Berman had the following results:
+    * Brute Force: 30 Seconds, 3.6 Billion Comparisons
+    * Horspool: 23 Seconds, 1.1 Billion Comparisons
+* It isn't rigorous, but interesting.
