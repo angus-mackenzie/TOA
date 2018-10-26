@@ -1,17 +1,19 @@
 # Space Time
+For many problems some extra space really pays off. Some examples of these are:
+* Hashing
+* B-Trees
+* Sorting
+* Horspool's and Boyer-Moore's Algorithm for String Matching
+* Dynamic Programming
 ## Sorting by Counting
-Example A:
-The Array is = `{13,11,12,13,12,12}`
-|Array Values|11|12|13|
-|---|---|---|
-|Frequencies|1|3|2|
-|Distribution|1|4|6|
-
-||D[0]|D[1]
-
-Finish
-
 ![Sorting by Counting](img/sortingbycounting.png)
+
+* Elements in [L.U]
+* Constraint: we cannot overwrite the original list
+* Distribution Counting
+    * Compute the frequency of each element
+* Algorithm
+![Sorting by counting](img/sortingbycounting1.png)
 
 # Horspool's Algorithm
 * Uses a *shoft table T* with an entry per...
