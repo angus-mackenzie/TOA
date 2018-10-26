@@ -168,3 +168,15 @@ Different types of transformations:
 * Pre-sorting
     * Closest pair
     * Convex hull
+
+# Space Time
+## Boyer Moore & Horspool
+* Text of length n and Pattern P[0 ... m-1]
+* Shift table called T:
+    * T(X) = m-1- rightmost index of x in P[0 ... m-2]
+    * T(X) = m if x is not in position P[0 ... m-2]
+* Horspool
+    * When there is a mismatch, shift pattern T[c] places where c is the last character currently aligned against the pattern
+* Boyer-Moore's Bad Character rule
+    * When there's a mismatch, calculate from the back, k, number of characters that matched
+    * Shift pattern max(T(c)-k,1) where c is the mismatched character

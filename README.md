@@ -15,6 +15,9 @@ Here are summaries of slides :eyeglasses:
 * [Brute Force](TOA3.md)
 * [Divide & Conquer](TOA4.md)
 * [Decrease & Conquer](TOA5.md)
+* [Transform & Conquer](TOA6.md)
+* [Space Time Trade-off](TOA7.md)
+* [Dynamic Programming](TOA8.md)
 
 The [pracs 📁](pracs) has information about the different practicals.
 
