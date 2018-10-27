@@ -15,6 +15,7 @@ for k = 2 to n do:
     a[k] <- A[k-1] + A[k-2]
 return A[n]
 ```
+This saves so much computation time, as you are no longer working out every single iteration of the fibonacci sequence, but rather simply summing the last two terms.
 # Binomial Coefficient
 The coefficient of the x<sup>k</sup> term in the polynomial expansion of the binomial power (1+x)<sup>n</sup>
 
