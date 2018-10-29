@@ -158,6 +158,7 @@ First construct the shift table for BARBER, there are 4 unique letters in BARBER
 |B|A|R|E|*|
 |---|---|---|---|---|
 |2|4|3|1|6|
+
 Where * represents all other characters, and the value in the table is the index of the last character of that character in the pattern BARBER.
 
 Now we have our shift table we can start going through the text.
