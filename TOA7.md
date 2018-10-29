@@ -89,6 +89,10 @@ PATT:    ENGAGING
 * If end letter isn't in the pattern, move right past it; otherwise align with rightmost occurrence of that letter in the pattern
 
 ### Summarized
+I believe a good way to look at this algorithm is from the formal definition laid out in the textbook [Introduction to the Design & Analysis of Algorithms](http://www.vgloop.com/f-/1394454921-126688.pdf) by Anany Levitin.
+
+![Horspool](img/horspooldefinition.png)
+
 1. Construct a shift table T
 2. Align the pattern gainst the beginning of the text
 3. Repeat until match or pattern reaches end text:
