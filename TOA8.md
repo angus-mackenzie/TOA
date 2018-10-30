@@ -21,6 +21,10 @@
     * Top-down does not solve unnecessary subproblems
 * Combine both - use memory function
 * Fill table with nulls to indicate value not calculated and then proceed top down
+
+## Top Down v Button Up
+* Top-down approach: This is the direct fall-out of the recursive formulation of any problem. If the solution to any problem can be formulated recursively using the solution to its sub-problems, and if its sub-problems are overlapping, then one can easily memoize or store the solutions to the sub-problems in a table. Whenever we attempt to solve a new sub-problem, we first check the table to see if it is already solved. If a solution has been recorded, we can use it directly, otherwise we solve the sub-problem and add its solution to the table.
+* Bottom-up approach: Once we formulate the solution to a problem recursively as in terms of its sub-problems, we can try reformulating the problem in a bottom-up fashion: try solving the sub-problems first and use their solutions to build-on and arrive at solutions to bigger sub-problems. This is also usually done in a tabular form by iteratively generating solutions to bigger and bigger sub-problems by using the solutions to small sub-problems. For example, if we already know the values of F41 and F40, we can directly calculate the value of F42.
 ## Summary
 * Dynamic Programing is typically applied to a recurrence relation
 * Break a problem down into smaller, more easily solved subproblems. To avoid solving these subproblems several times, their results are computed and recorded in a table
@@ -121,6 +125,10 @@ You can compare the two different implementations in the [example file](examples
     * Construct all possible binary trees containing all n keys
     * Compute the average number of comparisons in each tree
     * Select the tree with the minimum number of comparisons
+* Need to construct optimal BST - likely things near top, unlikely things near bottom
+* Bruteforce method would be to construct all possible trees, but with DP we can follow a better method:
+    * Have probabilities attached to each node
+    * Construct all n-1 key trees before can construct n key tree
 ## Transitive Closure: Warshall's Algorithm
 * Adjacency Matrix
     * The adjacency of a graph with n vertices is an n-by-n Boolean matrix with a row and a column for each of the graphs vertices, where the element in the ith row and jth column is 1 is there is an edge from the ith vertex to the jth vertex and a 0 if there is no edge
@@ -139,15 +147,52 @@ Here is the algorithm:
 * Tabulate distances between pairs of points on the map, roughly the same idea as Warshall's algorithm
 * In a  weighted graph, find shortest paths between every pair of vertices
 * Construct solution through series of matrices D(0), D(1).. using an initial subset of vertices as intermediaries
+* Finds shortest/cheapest path between every pair of vertices in a weighted directed graph
 
+![Floyd](img/floyd2.png)
+
+![Floyd Steps](img/floydsteps.png)
+
+
+Algorithm
 ![Floyds](img/floyd.png)
 
-## Knapsack Problem
+## Warshall vs Floyd
+* Warshall tells us if path exists or not (1 or 0 in the table)
+* Floyd tells us the values of shortest costs/paths (infinity or integer)
 
+
+
+## Knapsack Problem
+We have a knapsack with capacity W, and a set of items S. Each item has a weight wi and value vi. We must maximise the value in the bag while minimising the weight
+
+This can be done as follows: max(taking element N, not taking element N)
+
+```
+knapsack(i,j):
+    if(V[i,j]<0)
+        if j < weights[i]:
+            value = knapsack(i-1,j)
+        else:
+             value = max(knapsack(i-1),j),values[i]+knapsack(i-1,j-weights[i])
+        v[i,j] = value
+return V[i,j]
+```
 ## Knapsack Memory Function Solution
 
 ## Change Making
+Problem: give change for a specific amount n, with the least number of coins of the denominations. d1, d2 ... dm
 * Greedy algorithm
-
+* Each step choose the biggest coin which is smaller than the remaining total, repeat
+* Optimal efficiency for reasonable sets of coins, but if there are unusual denominations the algorithm can fail
 ## Text Compression
+* Text Compression
+    * Variable-length encoding
+        * Compress text by mapping each character to a code
+        * The length of a code depends on the probability of its character occurring
+    * Prefix-free code system
+        * There is no code in the system which is a prefix (substring from first character) of any other code in the system
+        * Unambiguous
 * Huffman Coding - Greedy algorithm
+    * Uses both variable length and prefix free
+    * Builds a huffman tree that assigns shorter strings to higher frequency characters
