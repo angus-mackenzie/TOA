@@ -29,6 +29,7 @@
 |Strassen Method|O(n<sup>2.8</sup>)|7T(n/2) + n<sup>2</sup> recurrence|
 |Closest Pair|O(nlogn)|Presorting is O(logn), every other step is O(n)|
 |Convex Hull|O(nlogn) average, O(n<sup>2</sup>) worst|
+|Binomial Coefficient|O(2<sup>n</sup>)||
 
 # Transform & Conquer
 |Name|Efficiency|Notes|
@@ -37,10 +38,9 @@
 
 
 # Space Time & DP
-|Type|Name|Worst Case|Best Case|Space|Notes|
-|---|---|---|---|---|---|
-|Horspool|O(nm)|Θ(n)||Faster on average than brute-force, often at least as efficient as Boyer-Moore|
-|Binomial Coefficient DC|O(2<sup>n</sup>)|||
-|Binomial Coefficient DP|O(n<sup>2</sup>|O(n * k)|
-|Warshall|O(n<sup>3</sup>)|O(n<sup>3</sup>)|O(n<sup>3</sup>)|The space complexity can possibly be O(n<sup>2</sup>)
-|Floyd|O(n<sup>3</sup>)|O(n<sup>3</sup>)|||
+|Type|Worst Case|Best Case|Notes|
+|---|---|---|---|
+|Horspool|O(nm)|Θ(n)|Faster on average than brute-force, often at least as efficient as Boyer-Moore|
+|Binomial Coefficient|O(n<sup>2</sup>)|O(n * k)||
+|Warshall|O(n<sup>3</sup>)|O(n<sup>3</sup>)|The space complexity can possibly be O(n<sup>2</sup>)|
+|Floyd|O(n<sup>3</sup>)|O(n<sup>3</sup>)||

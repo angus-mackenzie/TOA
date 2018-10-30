@@ -74,6 +74,43 @@ By substituting the values 33 and 3 into the above equation it would look as fol
 
 ![Binomial](img/binomial3.png)
 
+Write a function that takes two parameters `n` and `k` and returns the value of the binomial coefficient C(n,k). E.g.: given n = 4, and k = 2, the function should return 6 as
+4!/(2!(4-2)!) = 6
+
+Programmatically, the value of C(n,k) can be recursively calculated using the following standard formula for Binomial Coefficients:
+* C(n,k) = C(n-1,k-1) + C(n-1,k)
+
+This will stop once we reach the base condition:
+* C(n,0) = C(n,n) = 1
+
+In code this looks as follows:
+```java
+int binomialCoeff(int n, int k){
+    if(k == 0 || k == n){
+        return 1;
+    }
+    return binomialCoeff(n-1,k-1) + binomialCoeff(n-1,k);
+}
+```
+There are numerous overlapping subproblems, thus we should use Dynamic Programming.
+
+```java
+int binomialCoeff(int n, int k){
+    int[][] values = new int[n+1][k+1];
+    for(int i = 0; i<n+1; i++){
+        for(int j = 0; j<=Math.min(i,k);j++){
+            if(j==0 || j== i){
+                values[i][j] = 1;
+            }else{
+                values[i][j] = values[i-1][j-1] + values[i-1][j];
+            }
+        }
+    }
+    return values[n][k];
+}
+```
+
+You can compare the two different implementations in the [example file](examples/java/BinomialCoefficient)
 ## Optimal Static Binary Search Tree
 * Static
     * Only search operations
