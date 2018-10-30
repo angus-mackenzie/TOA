@@ -27,6 +27,8 @@ The books used for this course :books:
 * [Art of Computer Programming](http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf) - Donald E. Knuth
 * [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf) - Harold Abelson, Gerald Jay Sussman & Julie Sussman
 
+The [pdf 📁](PDFs) has pdf versions of these notes if you would like to print them.
+
 # Contributors ❤️
 Thanks for helping out with this repo!
 * [Michael White](https://github.com/MikeJamesWhite) 📷
