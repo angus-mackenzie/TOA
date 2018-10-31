@@ -1,4 +1,5 @@
 # Summary
+This is a rather crude summary I created before my exam - there are some omissions, most notably dynamic programming. I do recommend reading the other notes if possible.
 # What is an algorithm?
 * A sequence of unambiguous instructions for solving a well-defined problem. Algorithms are guaranteed to terminate if the input is valid.
 * Algorithms are a subset of procedures, which aren't guaranteed to terminate.

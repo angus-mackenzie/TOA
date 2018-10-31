@@ -1,16 +1,18 @@
+# Divide & Conquer <!-- omit in toc -->
+
 - [Master Theorem](#master-theorem)
     - [Example](#example)
-- [Divide & Conquer](#divide--conquer)
-    - [Matrix Addition](#matrix-addition)
-    - [Matrix Multiplication](#matrix-multiplication)
-        - [Brute Force](#brute-force)
-        - [Divide & Conquer](#divide--conquer)
-        - [Strassen's Method](#strassens-method)
-    - [Mergesort](#mergesort)
-    - [Quicksort](#quicksort)
-    - [Quicksort & Mergesort](#quicksort--mergesort)
-    - [Closest Pair](#closest-pair)
-    - [Convex Hull Problem](#convex-hull-problem)
+- [What is Divide & Conquer?](#what-is-divide--conquer)
+- [Matrix Addition](#matrix-addition)
+- [Matrix Multiplication](#matrix-multiplication)
+    - [Brute Force](#brute-force)
+    - [Divide & Conquer](#divide--conquer)
+    - [Strassen's Method](#strassens-method)
+- [Mergesort](#mergesort)
+- [Quicksort](#quicksort)
+- [Quicksort & Mergesort](#quicksort--mergesort)
+- [Closest Pair](#closest-pair)
+- [Convex Hull Problem](#convex-hull-problem)
 
 # Master Theorem
 If we have a recurrence of this form:
@@ -66,7 +68,7 @@ But what do `a`, `b` and `d` mean?
 * b is the fraction of the input the recursive call works on
 * d is the other work done
 
-# Divide & Conquer
+# What is Divide & Conquer?
 * Divide & Conquer is the best known algorithm design strategy:
     1. Divide instances of problem into two or more smaller instances
     2. Solve smaller instances recursively
@@ -79,7 +81,7 @@ Here is an example of finding a recursive solution:
 * Code and test with input size n, then 2n, then 4n
 
 ![Divide & Conquer](img/divideandconquer.png)
-## Matrix Addition
+# Matrix Addition
 ![Matrix Addition](img/matrixadd.gif)
 
 Which we can represent algorithmically as:
@@ -91,8 +93,8 @@ for(int row = 0; row<n; row++){
 }
 ```
 Add matrix A to matrix B to get matrix C - Θ(n<sup>2</sup>)
-## Matrix Multiplication
-### Brute Force
+# Matrix Multiplication
+## Brute Force
 ![Matrix Multiplication](img/matrixmult1.gif)
 
 Algorithmically:
@@ -115,7 +117,7 @@ Applying the rules we learned, we get:
 ![Matrix Multiplication Aggregate](img/matrixmult3.gif)
 
 
-### Divide & Conquer
+## Divide & Conquer
 Below is a complicated recursive matrix multiplication method - only a high level understanding is needed.
 
 So the same process as above is followed:
@@ -156,7 +158,7 @@ So T(n) ∈ Θ (n<sup>log<sub>2</sub>8</sup>) and therefore:</p>
 
 So the Divide and Conquer method has exactly the same efficiency class as Brute Force
 
-### Strassen's Method
+## Strassen's Method
 * For 2x2 matrices, the standard method using the definition makes 8 multiplications and 4 additions
 
 ![Matrix Multiplication](img/matrixmult1.gif)
@@ -195,7 +197,7 @@ We can solve the relation using the Master Theorem to find out the algorithmic e
     * Virginia Williams created a new algorithm in 2011 which has a complexity Θ(n<sup>2.4</sup>)
     * You can read her paper on it [here](https://people.csail.mit.edu/virgi/matrixmult-f.pdf)
 
-## Mergesort
+# Mergesort
 * Algorithm
     1. Split A[1..n] in half and put copy of each half into arrays B[1.. n/2] and C[1.. n/2]
     2. Recursively Mergesort arrays B and C
@@ -217,7 +219,7 @@ We can solve the relation using the Master Theorem to find out the algorithmic e
     * logn! ≈ nlogn - 1,44n
     * pace requirement Θ(n) (NOT in-place)
     * Can be implemented without recursion (bottom-up)
-## Quicksort
+# Quicksort
 * Select a pivot (partitioning element)
 * Rearrange the list into two sublists:
     * All elements positioned before the pivot are <= the pivot
@@ -248,11 +250,11 @@ We can solve the relation using the Master Theorem to find out the algorithmic e
     * Elimination of recursion
 * Considered the method of choice for sorting for large files (n >= 10 000)
 
-## Quicksort & Mergesort
+# Quicksort & Mergesort
 
 ![QS & MS](img/quicksortmergesort.png)
 
-## Closest Pair
+# Closest Pair
 The slides have a really great walkthrough of the divide & conquer algorithm for Closest Pair, I am going to simply add the pseudo-code and efficiency [here](docs/DivideAndConquerClosestPair.pdf)
 
 **Algorithm Overview**</p>
@@ -301,7 +303,7 @@ double ClosestPair(P,Q):
     * T(n) ∈ Θ(nlogn)
 * Main algorithm is the same efficiency class as the pre-sorting part
 
-## Convex Hull Problem
+# Convex Hull Problem
 * Remember this from [the last set of notes](TOA3.md)
 * There is a divide & conquer solution:
 1. Sort points by increasing x-coordinate values

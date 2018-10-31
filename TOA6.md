@@ -1,4 +1,4 @@
-- [Transform and Conquer](#transform-and-conquer)
+# Transform and Conquer  <!-- omit in toc -->
 - [Instance Simplification](#instance-simplification)
     - [Presorting](#presorting)
 - [Representation Change](#representation-change)
@@ -13,7 +13,7 @@
     - [Reduction to Graph Problems](#reduction-to-graph-problems)
 - [Strengths and Weaknesses of Transform & Conquer](#strengths-and-weaknesses-of-transform--conquer)
 
-# Transform and Conquer 
+
 > The secret of life is to replace one worry with another
 
 👆 Charles M. Schultz

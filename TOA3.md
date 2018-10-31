@@ -1,14 +1,27 @@
-# Brute Force
+# Brute Force <!-- omit in toc -->
+
+- [Recurrence Relation](#recurrence-relation)
+- [Backwards Substitution:](#backwards-substitution)
+- [Example](#example)
+- [Tower of Hanoi](#tower-of-hanoi)
+- [Recursive Fibonacci](#recursive-fibonacci)
+- [Brute Force](#brute-force)
+- [String Search](#string-search)
+    - [Worst Case Brute Force](#worst-case-brute-force)
+    - [String Matching](#string-matching)
+- [Closest Pair](#closest-pair)
+    - [Convex Hull Problem](#convex-hull-problem)
+        - [Brute Force](#brute-force-1)
+- [Pros and Cons of Brute Force](#pros-and-cons-of-brute-force)
+- [Exhaustive Search](#exhaustive-search)
+    - [Travelling Salesman Problem](#travelling-salesman-problem)
+    - [Exhaustive Search Implementation](#exhaustive-search-implementation)
+    - [Assignment Problem](#assignment-problem)
+    - [Knapsack Problem](#knapsack-problem)
+    - [Comments on Exhaustive Search](#comments-on-exhaustive-search)
+- [Summary](#summary)
+# Recurrence Relation
 Analysing a recurrence relation -> an equation or inequality that describes a function in terms of its value on smaller inputs
-
-Some brute-force solutions:
-* String matching
-* Closest pair
-* Convex hull
-* Hamiltonian path
-* Job assignment
-* Knapsack problem
-
 # Backwards Substitution:
 1. Express x(n-1) successively as a function of x(n-2), x(n-3)
 2. Derive x(n-j) as a function of j

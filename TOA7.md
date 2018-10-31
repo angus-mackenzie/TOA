@@ -1,11 +1,44 @@
-# Space Time
+# Space Time <!-- omit in toc -->
+- [Sorting by Counting](#sorting-by-counting)
+- [String Searching](#string-searching)
+    - [Horspool's Algorithm](#horspools-algorithm)
+        - [Case 1](#case-1)
+        - [Case 2](#case-2)
+        - [Case 3](#case-3)
+        - [Case 4](#case-4)
+        - [On Mismatch](#on-mismatch)
+        - [Summarized](#summarized)
+        - [Example](#example)
+        - [Example 1](#example-1)
+        - [Example 2](#example-2)
+        - [Example 3](#example-3)
+        - [Example 4](#example-4)
+    - [Boyer-Moore's](#boyer-moores)
+        - [Bad Character Rule](#bad-character-rule)
+        - [Calculating Bad Character Shift](#calculating-bad-character-shift)
+        - [Bad Char Shift v Horspool](#bad-char-shift-v-horspool)
+        - [Good Suffix Rule](#good-suffix-rule)
+        - [Preprocessing](#preprocessing)
+        - [Good Suffix Rule Cases](#good-suffix-rule-cases)
+            - [Example 1](#example-1-1)
+            - [Example 1b](#example-1b)
+            - [Example 2](#example-2-1)
+            - [Example 2b](#example-2b)
+            - [Example 3](#example-3-1)
+        - [Good Shift Table Construction](#good-shift-table-construction)
+        - [Summary](#summary)
+        - [Algorithm](#algorithm)
+        - [Example Good-Suffix Tables](#example-good-suffix-tables)
+        - [Examples](#examples)
+- [Time & Space](#time--space)
+
 For many problems some extra space really pays off. Some examples of these are:
 * Hashing
 * B-Trees
 * Sorting
 * Horspool's and Boyer-Moore's Algorithm for String Matching
 * Dynamic Programming
-## Sorting by Counting
+# Sorting by Counting
 ![Sorting by Counting](img/sortingbycounting.png)
 
 * Elements in [L.U]

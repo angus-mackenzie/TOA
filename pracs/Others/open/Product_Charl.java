@@ -1,9 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 /**
- *
  * @author Charl Ritter
  */
 public class Product_Charl {

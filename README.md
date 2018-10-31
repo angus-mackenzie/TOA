@@ -1,5 +1,5 @@
 # Theory of Algorithms
-These notes were compiled during our Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that was deemed useful.
+These notes were compiled during our Computer Science course at the University of Cape Town. It is a general summary of the slides, lectures and any other content that was deemed useful. As such, this repository is not an entire representation of the Theory of Algorithms - but rather useful content from my course.
 
 Before adding to this repository - please check out the [Contributing Guidelines](Contributing.md) 📐 and if you want to help out please check out the [Project Board](https://github.com/AngusTheMack/TOA/projects/1) for this repo 🅱️
 
@@ -19,7 +19,7 @@ Here are summaries of slides :eyeglasses:
 * [Space Time Trade-off](TOA7.md)
 * [Dynamic Programming](TOA8.md)
 
-The [pracs 📁](pracs) has information about the different practicals.
+The [pracs 📁](pracs) contains information about the different practicals.
 
 The books used for this course :books:
 * [Introduction to the Design & Analysis of Algorithms](http://www.vgloop.com/f-/1394454921-126688.pdf) - Anany Levitin

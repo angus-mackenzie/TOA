@@ -1,8 +1,26 @@
-# Dynamic Programming
+# Dynamic Programming <!-- omit in toc -->
+- [Key Features](#key-features)
+- [Principle of Optimality](#principle-of-optimality)
+- [Memory Function](#memory-function)
+- [Top Down v Button Up](#top-down-v-button-up)
+- [Summary](#summary)
+- [Greedy Algorithms](#greedy-algorithms)
+- [Examples](#examples)
+    - [Fibonacci Numbers](#fibonacci-numbers)
+    - [Binomial Coefficient](#binomial-coefficient)
+    - [Optimal Static Binary Search Tree](#optimal-static-binary-search-tree)
+    - [Transitive Closure: Warshall's Algorithm](#transitive-closure-warshalls-algorithm)
+    - [All Pairs Shortest Path: Floyd's Algorithm](#all-pairs-shortest-path-floyds-algorithm)
+    - [Warshall vs Floyd](#warshall-vs-floyd)
+    - [Knapsack Problem](#knapsack-problem)
+    - [Knapsack Memory Function Solution](#knapsack-memory-function-solution)
+    - [Change Making](#change-making)
+    - [Text Compression](#text-compression)
+
 * Dynamic Programming is a general algorithm design technique.
 * Invented to solve optimization problems in 1950s by American mathematician Richard Bellman
 * "Programming" <=> "Planning"
-## Key Features
+# Key Features
 * Construct table of all subproblem results
     * Initialized entries of smallest subproblem
     * Remainder filled in following a precise order
@@ -12,9 +30,9 @@
 * Final value computed is solution to the initial problem
 * Use iteration (and extra space for saved results)
 * avoid recursion if possible
-## Principle of Optimality
+# Principle of Optimality
 > An optimal solution to an instance of an optimization problem is composed of optimal solution to its subinstances
-## Memory Function
+# Memory Function
 * Dynamic Programming: problems whose solution satisfy a recurrence relation with overlapping subproblems
 * Top-down solves common subproblems more than once -> very inefficient - exponential!
 * Dynamic Programming fills table with all subproblems but calculates each one only once
@@ -22,10 +40,10 @@
 * Combine both - use memory function
 * Fill table with nulls to indicate value not calculated and then proceed top down
 
-## Top Down v Button Up
+# Top Down v Button Up
 * Top-down approach: This is the direct fall-out of the recursive formulation of any problem. If the solution to any problem can be formulated recursively using the solution to its sub-problems, and if its sub-problems are overlapping, then one can easily memoize or store the solutions to the sub-problems in a table. Whenever we attempt to solve a new sub-problem, we first check the table to see if it is already solved. If a solution has been recorded, we can use it directly, otherwise we solve the sub-problem and add its solution to the table.
 * Bottom-up approach: Once we formulate the solution to a problem recursively as in terms of its sub-problems, we can try reformulating the problem in a bottom-up fashion: try solving the sub-problems first and use their solutions to build-on and arrive at solutions to bigger sub-problems. This is also usually done in a tabular form by iteratively generating solutions to bigger and bigger sub-problems by using the solutions to small sub-problems. For example, if we already know the values of F41 and F40, we can directly calculate the value of F42.
-## Summary
+# Summary
 * Dynamic Programing is typically applied to a recurrence relation
 * Break a problem down into smaller, more easily solved subproblems. To avoid solving these subproblems several times, their results are computed and recorded in a table
 * Dynamic Programming can only be applied with the principle of optimality holds: the optimal solutions of subproblems can lead to the optimal solution of the overall problem
@@ -34,7 +52,7 @@
     * Dynamic Programming is effective on well-ordered problems
 * The memory function tries to combine the strengths of top-down and bottom-up by doing only those subproblems that are needed and only doing them once
 
-## Greedy Algorithms
+# Greedy Algorithms
 * Repeatedly tries to maximize the return based on examining local conditions, with the hope that the outcome will lead to a desired outcome for the global problem
     * In some cases such a strategy is guaranteed to offer optimal solutions in some other cases it may provide a compromise that produces acceptable approximations
 * Optimization problems are solved through a sequence of choices that are:

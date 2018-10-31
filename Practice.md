@@ -1,6 +1,10 @@
-# Practice
+# Practice <!-- omit in toc -->
+- [2017 Theory Of Algorithms Section](#2017-theory-of-algorithms-section)
+- [Horspool Algorithm Example](#horspool-algorithm-example)
+- [Boyer Moore Algorithm Example](#boyer-moore-algorithm-example)
+
 This document has some question and answers in order to test knowledge on the subject of TOA, please attempt the question before looking at the answer.
-# 2017 Theory Of Algorithms
+# 2017 Theory Of Algorithms Section
 **Question 1**
 1. Briefly explain the techniques below. Be sure the difference between the two problem-solving strategies in each pair is clear. (6)
     1. Divide-and-conquer and decrease-and-conquer

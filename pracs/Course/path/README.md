@@ -1,2 +1,2 @@
 # Finish Practical
-Please add write up here, and solutions in this folder
+Please add a surmised write up here, and solutions in this folder if you complete it

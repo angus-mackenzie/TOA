@@ -1,2 +1,1 @@
-# Finish Practical
-Please add write up here, and solutions in this folder
+This practical was supplied to us for practice. It is half completed. There is no model answer to gauge whether the solution is correct though, so one can only speculate 🤷‍

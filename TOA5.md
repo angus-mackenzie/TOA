@@ -1,4 +1,5 @@
-- [Decrease & Conquer](#decrease--conquer)
+# Decrease & Conquer <!-- omit in toc -->
+
 - [Decrease by a Constant Factor](#decrease-by-a-constant-factor)
 - [Examples](#examples)
     - [Insertion Sort](#insertion-sort)
@@ -19,7 +20,7 @@
     - [Linear Interpolation Sort](#linear-interpolation-sort)
 - [Strengths and Weaknesses of Decrease & Conquer](#strengths-and-weaknesses-of-decrease--conquer)
 
-# Decrease & Conquer
+There are different types of decrease & conquer
 * Decrease by a constant
 * Decrease by a constant factor
 * Variable size decrease
